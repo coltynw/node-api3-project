@@ -1,5 +1,7 @@
 const express = require('express');
 
+const router = require("./users/userRouter");
+
 const server = express();
 
 server.get('/', (req, res) => {
@@ -7,6 +9,9 @@ server.get('/', (req, res) => {
 });
 
 //custom middleware
+server.use("/api/posts", router);
+
+
 
 function logger(req, res, next) {}
 

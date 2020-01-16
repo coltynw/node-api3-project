@@ -2,6 +2,13 @@ const express = require('express');
 
 const router = express.Router();
 
+
+router.get("/TEST", (req, res) => {
+  res.send(
+      `<p> TEST TEST TEST</p>`
+      );
+});
+
 router.post('/', (req, res) => {
   // do your magic!
 });
